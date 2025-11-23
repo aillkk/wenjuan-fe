@@ -35,8 +35,8 @@ jobs:
 
       - name: Build
         run: npm run build
-        # 构建后检查产物路径是否存在（用于调试）
-        continue-on-error: false  # 构建失败则终止
+        env:
+          CI: false
 
       - name: Setup Pages
         uses: actions/configure-pages@v5.0.0  # 使用最新版本
